@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body style=" background-color: #fff ">
+	<table align="center" style="background-color:	#DCDCDC">
+        <tr>
+           <td>
+               <div id="body">
+			  	   <div id="header">
+			               
+			  	   </div>
+			  	   <div id="submenu">
+			           <table width="900px">
+                          <tr>
+                             <td width="100px" align="center" ><a href="/home"><%= t(:home)  %></a></td>
+                             <td width="100px" align="center"><a href="#"><%=  t(:introduction)  %></a></td>
+                             <td width="100px" align="center"><a href="/consultancy">CONSULTANCY</a></td>
+                             <td width="100px" align="center"><a href="/contact">CONTACT</a></td>
+                             <td width="100px" align="center"><a href="/signup">SIGNUP</a></td>
+                             <td width="100px" align="center"><a href="#"><%=  t(:login) %></a></td>
+                          </tr>
+			           </table>
+			  	   </div>
+			  	   <div id="mainmenu">
+                <div id="box">
+  			  	   	   <div id="headerbox1">CATEGORY
+  			  	   	   </div>
+  			           <ul>
+                             <li><%= link_to "Shirts",  '#'  %></li>
+                             <li><%= link_to "T-Shirts" ,'#' %></li>
+                             <li><%= link_to "Jacket" , '#' %></li>
+                             <li><%= link_to "jean", '#' %></li>
+                             <li><%= link_to "Khaki pants" , '#' %></li>
+  			           </ul>
+                </div>
+                <div id="box">
+                    <div id="headerbox2">
+                      HOTLINE
+                    </div>
+                    <img src="/assets/hotline.jpg" width="200px">
+                </div>
+                <div id="box">
+                    <div id="headerbox3">
+                      SHIRTS
+                    </div>
+                    <img  src="/assets/aosomi.jpg" widt="200px">
+                </div>
+                <div id="box">
+                   <div id="headerbox1">JEANS</div>
+                   <img src="/assets/quanjean.jpg">
+                </div>
+
+			  	   </div>
+			  	   <div id="content">
+			           <%= yield %>
+			  	   </div>
+			  	   <div id="footer">
+			           Copyright © 2012 by Diepnguyen.
+			  	   </div>
+	  		   </div>
+
+           </td>
+        </tr>
+	</table>  
+
+</body>
+</html>
